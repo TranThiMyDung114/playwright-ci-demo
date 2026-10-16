@@ -16,7 +16,7 @@ test('LOGIN-001 - Login successfully', async ({ page }) => {
   await page.getByRole('button', { name: 'Login' }).click();
 
   // Step 5: Verify Dashboard
-  await expect(page).toHaveURL(/this-page-does-not-exist/);
+  await expect(page).toHaveURL(/dashboard/);
   await expect(
     page.getByRole('heading', { name: 'Dashboard' })
   ).toBeVisible();
